@@ -8,9 +8,7 @@
 - **資安檢測腳本**：
   - 將家目錄英文版腳本 `~/security-port-audit.sh` 移入倉庫，並更名為 `~/scripts/bin/port_audit.sh`。
   - 刪除舊版中文腳本 `~/scripts/bin/security-port-audit.sh`。
-- **VM 狀態檢測腳本**：
-  - 將 `~/vm/check.sh` 移入倉庫，並更名為 `~/scripts/bin/vm_check.sh`。
-  - 移除家目錄下已清空的 `~/vm` 資料夾。
+
 
 ## 3. 全域環境安裝腳本 (Install Script)
 - 於 `~/scripts/install.sh` 建立安裝自動化程式碼。
@@ -19,7 +17,7 @@
   2. 自動將 `~/scripts/bin/` 內的所有 `.sh` 腳本（去除 `.sh` 副檔名後）建立軟連結 (symlink) 至 `/usr/local/bin/`。
   3. 為 `bin/` 內的腳本賦予可執行權限 (`chmod +x`)。
 - **預期效果**：
-  使用者能在終端機直接輸入 `port_audit` 或 `vm_check` 即可執行腳本。
+  使用者能在終端機直接輸入 `port_audit` 即可執行腳本。
 
 ## 4. 版本控制與備份 (Version Control)
 - 遷移、新增腳本與建立 `install.sh` 完成後，所有異動均會透過 Git commit 記錄至 `~/scripts`，確保配置可被追溯與跨主機發布。
